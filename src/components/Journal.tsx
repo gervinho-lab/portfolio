@@ -136,7 +136,7 @@ export default function Journal() {
 
                 {/* Arrow */}
                 <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-stroke flex items-center justify-center transition-all duration-300 group-hover:bg-text-primary group-hover:border-text-primary group-hover:text-bg text-muted">
-                  <span className="text-xs">↗</span>
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
                 </div>
               </motion.article>
             ))}
