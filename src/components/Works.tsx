@@ -346,7 +346,7 @@ export default function Works() {
                     >
                       {selected.images.map((img, idx) => (
                         // Center slide takes 50vw on desktop, side slides show partially
-                        <SwiperSlide key={idx} className="!w-[85%] md:!w-[50%] max-w-[1000px] aspect-video rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+                        <SwiperSlide key={idx} className="!w-[95%] sm:!w-[85%] md:!w-[50%] max-w-[1000px] aspect-video rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
                           <div className="w-full h-full relative bg-surface">
                             <img
                               src={img}
@@ -370,7 +370,7 @@ export default function Works() {
                     <div className="custom-pagination"></div>
                   </>
                 ) : (
-                  <div className="w-[85%] md:w-[70%] max-w-[1000px] aspect-video rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.6)] mt-8 mb-12">
+                  <div className="w-[95%] sm:w-[85%] md:w-[70%] max-w-[1000px] aspect-video rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.6)] mt-8 mb-12">
                     <img
                       src={selected.images[0]}
                       alt={selected.title}
@@ -385,10 +385,10 @@ export default function Works() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="w-full max-w-3xl px-6 md:px-0 mt-8 mb-16 relative z-10"
+                className="w-full max-w-3xl px-4 md:px-0 mt-8 mb-16 relative z-10"
                 onPointerDown={(e) => e.stopPropagation()} // Prevent closing when interacting with text
               >
-                <div className="bg-surface/60 backdrop-blur-xl border border-stroke rounded-3xl p-8 md:p-12 shadow-2xl">
+                <div className="bg-surface/60 backdrop-blur-xl border border-stroke rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="w-6 h-px bg-stroke" />
                     <span className="text-xs md:text-sm text-muted uppercase tracking-[0.25em] font-body">Projet</span>
@@ -398,7 +398,7 @@ export default function Works() {
                   </h3>
                   <p className="text-base md:text-lg text-muted font-body mb-8">{selected.subtitle}</p>
                   <div className="h-px bg-stroke mb-8" />
-                  <p className="text-base md:text-lg text-text-primary/90 font-body leading-loose whitespace-pre-line">
+                  <p className="text-[14px] sm:text-base md:text-lg text-text-primary/90 font-body leading-loose whitespace-pre-line">
                     {selected.description}
                   </p>
                 </div>

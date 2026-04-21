@@ -183,7 +183,7 @@ export default function Journal() {
               </div>
 
               {/* Content */}
-              <div className="p-6 md:p-8 -mt-12 relative z-10">
+              <div className="p-5 sm:p-6 md:p-8 -mt-12 relative z-10">
                 <div className="flex items-center gap-3 mb-4 text-xs text-muted font-body">
                   <span>{selected.readTime}</span>
                   <span className="w-1 h-1 rounded-full bg-stroke" />
@@ -196,7 +196,7 @@ export default function Journal() {
                   {selected.description}
                 </p>
                 <div className="h-px bg-stroke mb-6" />
-                <div className="text-sm md:text-base text-text-primary/80 font-body leading-relaxed whitespace-pre-line">
+                <div className="text-[14px] sm:text-base text-text-primary/80 font-body leading-relaxed whitespace-pre-line">
                   {selected.content}
                 </div>
               </div>
