@@ -51,7 +51,7 @@ const projects: ProjectData[] = [
   {
     slug: "strategie-saas",
     title: "Stratégie SaaS",
-    subtitle: "Création deSaaS & outils no-code conçus pour répondre à des besoins réels",
+    subtitle: "Création de SaaS & outils no-code conçus pour répondre à des besoins réels",
     image: "/projects/saas1.webp",
     gradient: "from-amber-500 via-amber-300/60 via-orange-500/60 to-transparent",
     span: 5,
