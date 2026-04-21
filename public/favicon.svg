@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4e85bf" />
+      <stop offset="50%" stop-color="#89aacc" />
+      <stop offset="100%" stop-color="#2a4563" />
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&amp;display=swap');
+      .text {
+        font-family: 'Instrument Serif', serif;
+        font-style: italic;
+        font-size: 52px;
+        fill: #f5f5f7;
+      }
+    </style>
+  </defs>
+  <!-- Outer glow/gradient -->
+  <circle cx="50" cy="50" r="50" fill="url(#grad)" />
+  <!-- Inner dark background -->
+  <circle cx="50" cy="50" r="44" fill="#0A0A0A" />
+  <!-- Text -->
+  <text x="50" y="55" class="text" text-anchor="middle" dominant-baseline="middle">TS</text>
+</svg>
