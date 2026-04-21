@@ -17,13 +17,18 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     // Scroll spy for active menu items
-    const sectionIds = navLinks.map(link => link.href.substring(1));
+    const sectionIds = [...navLinks.map(link => link.href.substring(1)), "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const label = navLinks.find(link => link.href === `#${entry.target.id}`)?.label;
-            if (label) setActive(label);
+            const id = entry.target.id;
+            if (id === "contact") {
+              setActive("Contact");
+            } else {
+              const label = navLinks.find(link => link.href === `#${id}`)?.label;
+              if (label) setActive(label);
+            }
           }
         });
       },
@@ -56,7 +61,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 md:pt-6 px-4"
     >
       <div
-        className={`inline-flex items-center rounded-full backdrop-blur-md border border-white/10 bg-surface px-2 py-2 transition-shadow duration-300 ${scrolled ? "shadow-md shadow-black/20" : ""
+        className={`inline-flex items-center gap-1 sm:gap-2 rounded-full backdrop-blur-md border border-white/10 bg-surface px-2 py-2 transition-shadow duration-300 ${scrolled ? "shadow-md shadow-black/20" : ""
           }`}
       >
         {/* Logo */}
@@ -93,6 +98,7 @@ export default function Navbar() {
         {/* Contact button */}
         <button
           onClick={() => {
+            setActive("Contact");
             const el = document.querySelector("#contact");
             if (el) el.scrollIntoView({ behavior: "smooth" });
           }}
@@ -100,7 +106,7 @@ export default function Navbar() {
         >
           <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <span className="relative z-10 flex items-center gap-1 bg-surface rounded-full px-3 py-1.5 backdrop-blur-md">
-            Contact <span className="text-[10px]">↗</span>
+            Contact <svg className="w-2.5 h-2.5 ml-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
           </span>
         </button>
       </div>
