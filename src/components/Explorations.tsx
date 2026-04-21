@@ -18,7 +18,7 @@ const rightNotes = notes.filter((_, i) => i % 2 !== 0);
 
 function EditorialNote({ text, index, align }: { text: string; index: number, align: "left" | "right" }) {
   return (
-    <div className={`group w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] flex flex-col gap-4 md:gap-5 cursor-default ${align === "right" ? "items-end text-right ml-auto" : "items-start text-left"}`}>
+    <div className={`group w-full max-w-[260px] min-[430px]:max-w-[320px] sm:max-w-[400px] md:max-w-[480px] flex flex-col gap-4 md:gap-5 cursor-default ${align === "right" ? "items-end text-right ml-auto" : "items-start text-left"}`}>
       <div className="flex items-center gap-3 md:gap-4 opacity-60 md:opacity-40 group-hover:opacity-100 transition-opacity duration-700">
         {align === "right" ? (
           <>
@@ -32,7 +32,7 @@ function EditorialNote({ text, index, align }: { text: string; index: number, al
           </>
         )}
       </div>
-      <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-display text-text-primary/90 md:text-text-primary/20 group-hover:text-text-primary transition-colors duration-700 leading-snug md:leading-[1.15]">
+      <p className="text-xl min-[430px]:text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-display text-text-primary/90 md:text-text-primary/20 group-hover:text-text-primary transition-colors duration-700 leading-snug md:leading-[1.15]">
         {text}
       </p>
     </div>
@@ -67,9 +67,9 @@ export default function Explorations() {
         // Left column parallax
         gsap.fromTo(
           leftCol,
-          { y: isMobile ? "10vh" : "15vh" },
+          { y: isMobile ? "5vh" : "15vh" },
           {
-            y: isMobile ? "-150vh" : "-120vh",
+            y: isMobile ? "-220vh" : "-120vh",
             ease: "none",
             scrollTrigger: {
               trigger: section,
@@ -83,9 +83,9 @@ export default function Explorations() {
         // Right column parallax
         gsap.fromTo(
           rightCol,
-          { y: isMobile ? "30vh" : "35vh" },
+          { y: isMobile ? "20vh" : "35vh" },
           {
-            y: isMobile ? "-130vh" : "-100vh",
+            y: isMobile ? "-190vh" : "-100vh",
             ease: "none",
             scrollTrigger: {
               trigger: section,
@@ -101,7 +101,7 @@ export default function Explorations() {
     }, []);
 
   return (
-    <section ref={sectionRef} id="explorations" className="relative min-h-[250vh] bg-bg overflow-hidden">
+    <section ref={sectionRef} id="explorations" className="relative min-h-[350vh] md:min-h-[250vh] bg-bg overflow-hidden">
       {/* Pinned center content */}
       <div ref={contentRef} className="relative z-30 h-screen flex flex-col justify-center items-center pointer-events-none">
         
@@ -115,7 +115,7 @@ export default function Explorations() {
             <span className="w-8 h-px bg-stroke" />
           </div>
           
-          <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-display text-text-primary leading-[1.1] md:leading-[1.1] mb-6 md:mb-8 drop-shadow-xl opacity-90">
+          <h2 className="text-[12vw] sm:text-5xl md:text-7xl lg:text-[5.5rem] font-display text-text-primary leading-[1.1] md:leading-[1.1] mb-6 md:mb-8 drop-shadow-xl opacity-90 text-balance">
             Labo <em className="italic">créatif</em>
           </h2>
           
@@ -146,16 +146,16 @@ export default function Explorations() {
         <div className="relative w-full max-w-[1800px] h-full mx-auto px-4 md:px-8 lg:px-12">
           
           {/* Left Column */}
-          <div ref={leftColRef} className="absolute left-4 md:left-6 lg:left-12 top-0 w-[85%] md:w-[45%] flex flex-col gap-[30vh] md:gap-[40vh] pointer-events-auto items-start">
-             <div className="h-[25vh] md:h-[20vh]" />
+          <div ref={leftColRef} className="absolute left-4 md:left-6 lg:left-12 top-0 w-[90%] md:w-[45%] flex flex-col gap-[60vh] md:gap-[40vh] pointer-events-auto items-start">
+             <div className="h-[20vh]" />
              {leftNotes.map((text, i) => (
                <EditorialNote key={i} text={text} index={i * 2 + 1} align="left" />
              ))}
           </div>
 
           {/* Right Column */}
-          <div ref={rightColRef} className="absolute right-4 md:right-6 lg:right-12 top-0 w-[85%] md:w-[45%] flex flex-col gap-[30vh] md:gap-[40vh] pointer-events-auto items-end">
-             <div className="h-[45vh] md:h-[50vh]" />
+          <div ref={rightColRef} className="absolute right-4 md:right-6 lg:right-12 top-0 w-[90%] md:w-[45%] flex flex-col gap-[60vh] md:gap-[40vh] pointer-events-auto items-end">
+             <div className="h-[50vh] md:h-[40vh]" />
              {rightNotes.map((text, i) => (
                <EditorialNote key={i} text={text} index={i * 2 + 2} align="right" />
              ))}

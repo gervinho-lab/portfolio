@@ -78,7 +78,7 @@ export default function Hero() {
         </p>
 
         {/* Name */}
-        <h1 className="name-reveal text-6xl md:text-8xl lg:text-9xl font-display italic leading-[0.9] tracking-tight text-text-primary mb-6">
+        <h1 className="name-reveal text-[14vw] sm:text-6xl md:text-8xl lg:text-9xl font-display italic leading-[0.9] tracking-tight text-text-primary mb-6 text-balance">
           Thomas Sadin
         </h1>
 
@@ -100,19 +100,22 @@ export default function Hero() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="blur-in inline-flex gap-4 flex-wrap justify-center">
+        <div className="blur-in flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0">
           {/* See Works */}
           <button
             onClick={() => {
               document.querySelector("#works")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group relative rounded-full text-sm px-7 py-3.5 bg-text-primary text-bg font-medium transition-all duration-300 hover:scale-105 gradient-ring overflow-visible"
+            className="group relative rounded-full text-sm w-full max-w-[260px] mx-auto sm:max-w-none sm:mx-0 sm:w-[200px] h-[64px] bg-text-primary text-bg font-medium transition-all duration-300 hover:scale-[1.03] overflow-visible flex items-center justify-center transform-gpu"
           >
+            {/* Hover Glow Border */}
             <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
-            <span className="relative z-10 flex items-center gap-1 bg-bg text-text-primary rounded-full px-5 py-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0 justify-center">
+            {/* Hover Dark Interior */}
+            <span className="absolute inset-0 rounded-full bg-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
+            {/* Text */}
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-text-primary">
               Voir mes projets
             </span>
-            <span className="group-hover:opacity-0 transition-opacity duration-300">Voir mes projets</span>
           </button>
 
           {/* Me contacter — same animation as above + scrolls to #contact */}
@@ -120,13 +123,16 @@ export default function Hero() {
             onClick={() => {
               document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group relative rounded-full text-sm px-7 py-3.5 bg-text-primary text-bg font-medium transition-all duration-300 hover:scale-105 gradient-ring overflow-visible"
+            className="group relative rounded-full text-sm w-full max-w-[260px] mx-auto sm:max-w-none sm:mx-0 sm:w-[200px] h-[64px] bg-text-primary text-bg font-medium transition-all duration-300 hover:scale-[1.03] overflow-visible flex items-center justify-center transform-gpu"
           >
+            {/* Hover Glow Border */}
             <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
-            <span className="relative z-10 flex items-center gap-1 bg-bg text-text-primary rounded-full px-5 py-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0 justify-center">
+            {/* Hover Dark Interior */}
+            <span className="absolute inset-0 rounded-full bg-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
+            {/* Text */}
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-text-primary">
               Me contacter
             </span>
-            <span className="group-hover:opacity-0 transition-opacity duration-300">Me contacter</span>
           </button>
         </div>
       </div>

@@ -16,6 +16,7 @@ export interface ProjectData {
   image: string;
   gradient: string;
   span: number;
+  colClass: string;
   description: string;
   images: string[];
 }
@@ -28,6 +29,7 @@ const projects: ProjectData[] = [
     image: "/projects/minecraft-server.webp",
     gradient: "from-violet-500 via-fuchsia-400/60 via-indigo-500/60 to-transparent",
     span: 7,
+    colClass: "md:col-span-7",
     description: "Fondateur & chef de projet d’un serveur Minecraft multijoueur pensé comme un véritable espace communautaire. J’y ai supervisé la vision globale du projet : positionnement du serveur, choix des modes de jeu, organisation de l’équipe staff et définition d’une expérience cohérente pour les joueurs, du premier join jusqu’aux événements spéciaux.\n\nUne grande partie du travail a consisté à animer et faire grandir la communauté : création de contenus (annonces, visuels, messages Discord), organisation d’événements in‑game, gestion des retours joueurs et modération du serveur. L’objectif était de maintenir un environnement dynamique, fun mais structuré, capable de fidéliser les joueurs sur le long terme plutôt que de miser uniquement sur le “buzz” de lancement.\n\nJ’ai également suivi les statistiques d’activité (pics de connexion, récurrence, rétention après événement, comportements à risque) pour adapter les décisions : ajustement des horaires d’animations, équilibrage des mécaniques de jeu, amélioration du onboarding et optimisation des communications. Ce projet m’a permis de combiner gestion de communauté, logique produit, data et organisation d’événements dans un cadre concret et très vivant.",
     images: ["/projects/minecraft-server.webp"],
   },
@@ -38,6 +40,7 @@ const projects: ProjectData[] = [
     image: "/projects/portfolio1.webp",
     gradient: "from-sky-500 via-blue-400/60 to-transparent",
     span: 5,
+    colClass: "md:col-span-5",
     description: "Création d’un portfolio personnel pensé comme un terrain d’expérimentation entre design humain et outils d’intelligence artificielle. L’idée : construire une vitrine claire de mes projets marketing, tout en utilisant l’IA comme copilote sur la structure, les textes et certains éléments visuels, sans perdre la cohérence de mon identité.\n\nLe site met en avant mes principaux projets (campagnes digitales, SaaS, serveur Minecraft, études de business model etc.) avec un focus sur la façon dont j’analyse, conçois des stratégies et mesure l’impact. J’y ai travaillé l’UX, la hiérarchie de l’information et l’adaptation mobile pour faciliter le parcours recruteur : comprendre rapidement qui je suis, ce que je fais et comment je réfléchis.\n\nL’IA m’a servi à générer le code et des idées de layout, à affiner les textes, tester différents angles de storytelling et optimiser certains aspects techniques. Ce projet me permet de montrer concrètement comment j’utilise l’IA comme levier de productivité et de créativité, et pas seulement comme un gadget.",
     images: [
       "/projects/portfolio2.webp",
@@ -52,6 +55,7 @@ const projects: ProjectData[] = [
     image: "/projects/saas1.webp",
     gradient: "from-amber-500 via-amber-300/60 via-orange-500/60 to-transparent",
     span: 5,
+    colClass: "md:col-span-5",
     description: "Exploration personnelle de la création de SaaS orientés productivité, de l’idée au prototype fonctionnel. L’objectif : tester comment des outils simples peuvent aider des professionnels à mieux piloter leur activité au quotidien, en combinant logique produit, UX et automatisation via l’IA et le no‑code.\n\nCoacho est un cockpit IA pensé pour les coachs : centralisation des informations clients, suivi des séances, génération d’idées de contenus et aide à l’analyse de leur activité. SocialFlow est un outil de gestion centralisée des réseaux sociaux pour les entreprises, permettant de planifier des posts sur plusieurs plateformes, suivre les performances et faciliter l’optimisation des contenus sans passer par une agence social media.",
     images: [
       "/projects/saas2.webp",
@@ -66,6 +70,7 @@ const projects: ProjectData[] = [
     image: "/projects/campagne1.webp",
     gradient: "from-emerald-500 via-emerald-300/60 via-teal-500/60 to-transparent",
     span: 7,
+    colClass: "md:col-span-7",
     description: "Projet de campagne autour de la sortie de Marvel’s Wolverine sur PS5, réalisé en équipe dans un contexte d’agence. Nous avons commencé par analyser l’ADN de la licence et du studio Insomniac, les précédents lancements réussis (Spider‑Man), ainsi que les forces/faiblesses du jeu via SWOT, PESTEL, benchmark et mapping concurrentiel pour positionner clairement Wolverine comme un AAA narratif mature et immersif.​\n\nÀ partir de cette base stratégique, nous avons construit une segmentation détaillée des joueurs (démographique, psychographique, comportementale) et défini plusieurs personas incarnant les cibles prioritaires : hardcore gamers, fans Marvel orientés narration, joueuses à la recherche de profondeur émotionnelle, etc. Chaque cible était associée à des attentes, des pain points et des canaux privilégiés (Twitch, YouTube, TikTok, Instagram, événements IRL) afin d’aligner le message, le ton et les formats sur leurs usages réels.​\n\nNous avons ensuite défini des objectifs SMART et élaboré un plan marketing 360° : stratégie d’influence avec créateurs clés, phases de teasing, trailers et gameplays, présence en conventions (PGW), dispositifs social media, campagnes paid (YouTube, Twitch, TikTok, Instagram) et mécaniques d’UGC. Le tout était accompagné de KPIs précis (visibilité, engagement, précommandes, rétention post‑lancement) et d’un dispositif de suivi pour optimiser la campagne dans le temps, comme sur un vrai lancement AAA.",
     images: [
       "/projects/campagne2.webp",
@@ -80,6 +85,7 @@ const projects: ProjectData[] = [
     image: "/projects/ecommerce1.webp",
     gradient: "from-rose-500 via-pink-400/60 via-rose-500/60 to-transparent",
     span: 12,
+    colClass: "md:col-span-12",
     description: "Dans ce projet de groupe (14 étudiants), nous avons travaillé comme une équipe de conseil chargée de repenser le business model d’Ubisoft Connect, la plateforme de distribution digitale d’Ubisoft. L’objectif : comprendre pourquoi elle reste derrière des acteurs comme Steam ou l’Epic Games Store, puis proposer un modèle plus compétitif, centré à la fois sur la performance financière et l’expérience joueur.​\n\nNous avons mené une analyse complète du marché et des usages : benchmark des principales plateformes, étude des tendances e‑commerce gaming (abonnements, free‑to‑play, cloud gaming), segmentation détaillée des joueurs et identification d’opportunités de croissance. À partir de ces données, nous avons redéfini la proposition de valeur d’Ubisoft Connect, imaginé de nouvelles offres d’abonnements, des sources de revenus complémentaires (merch, transmedia, monnaie virtuelle) et des pistes de partenariats stratégiques.​\n\n Enfin, nous avons structuré un plan de déploiement opérationnel : organisation par pôles (marketing, tech, UX, finance, legal), roadmap par étapes, maquettes d’interface, scénarios de rentabilité sur trois ans et KPIs de suivi (acquisition, engagement, revenus, marge). Ce projet m’a permis de pratiquer concrètement l’analyse stratégique, la modélisation business et le travail en équipe sur un cas e‑commerce très proche des enjeux actuels du secteur jeu vidéo.",
     images: [
       "/projects/ecommerce2.webp",
@@ -188,8 +194,7 @@ export default function Works() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-80px" }}
                 variants={inView}
-                className={`md:col-span-${project.span} group relative overflow-hidden bg-surface border border-stroke rounded-3xl cursor-pointer aspect-[4/3]`}
-                style={{ gridColumn: `span ${project.span}` }}
+                className={`group relative overflow-hidden bg-surface border border-stroke rounded-3xl cursor-pointer aspect-square md:aspect-[4/3] ${project.colClass}`}
                 onClick={() => openProject(project)}
               >
                 {/* Background image */}
@@ -264,7 +269,7 @@ export default function Works() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="relative w-full h-full flex flex-col items-center justify-start pt-16 md:pt-24 overflow-y-auto overflow-x-hidden"
+              className="relative w-full h-full flex flex-col items-center justify-start pt-20 md:pt-24 overflow-y-auto overflow-x-hidden"
               onPointerDown={(e) => {
                 // If they explicitly clicked on the empty scrollable container itself (not children)
                 if (e.target === e.currentTarget) setSelected(null);
@@ -354,10 +359,10 @@ export default function Works() {
                     </Swiper>
 
                     {/* Absolutely positioned Navigation Arrows (overlapping the center slide edges) */}
-                    <button className="swiper-button-prev-custom absolute top-1/2 -translate-y-[calc(50%+1rem)] left-[calc(50%-43%)] md:left-[calc(50%-27%)] z-20 w-12 h-12 rounded-full border border-text-primary/50 bg-bg/40 backdrop-blur-md flex items-center justify-center text-text-primary hover:border-text-primary hover:bg-text-primary hover:text-bg transition-all shadow-lg">
+                    <button className="swiper-button-prev-custom absolute top-1/2 -translate-y-[calc(50%+1rem)] left-[calc(50%-43%)] md:left-[calc(50%-27%)] z-20 w-12 h-12 rounded-full border border-text-primary/50 bg-bg/40 backdrop-blur-md hidden md:flex items-center justify-center text-text-primary hover:border-text-primary hover:bg-text-primary hover:text-bg transition-all shadow-lg">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
                     </button>
-                    <button className="swiper-button-next-custom absolute top-1/2 -translate-y-[calc(50%+1rem)] right-[calc(50%-43%)] md:right-[calc(50%-27%)] z-20 w-12 h-12 rounded-full border border-text-primary/50 bg-bg/40 backdrop-blur-md flex items-center justify-center text-text-primary hover:border-text-primary hover:bg-text-primary hover:text-bg transition-all shadow-lg">
+                    <button className="swiper-button-next-custom absolute top-1/2 -translate-y-[calc(50%+1rem)] right-[calc(50%-43%)] md:right-[calc(50%-27%)] z-20 w-12 h-12 rounded-full border border-text-primary/50 bg-bg/40 backdrop-blur-md hidden md:flex items-center justify-center text-text-primary hover:border-text-primary hover:bg-text-primary hover:text-bg transition-all shadow-lg">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
                     </button>
 

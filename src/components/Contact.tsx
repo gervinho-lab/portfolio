@@ -83,14 +83,16 @@ export default function Contact() {
             <p className="text-sm md:text-base text-muted max-w-sm mb-8 font-body leading-relaxed">
               Une alternance, un projet, une idée ? Je suis disponible et motivé. Parlons-en.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center px-4 sm:px-0">
               <motion.a
                 href="mailto:thomas.sadinpro@outlook.com"
                 whileTap={{ scale: 0.97 }}
-                className="group relative inline-flex items-center gap-2 px-8 py-4 bg-bg border-2 border-stroke rounded-full text-sm text-text-primary font-medium transition-all duration-300 font-body"
+                className="group relative w-full max-w-[280px] mx-auto sm:max-w-none sm:mx-0 sm:w-[260px] inline-flex items-center justify-center border border-stroke rounded-full text-sm text-text-primary font-medium transition-all duration-300 font-body overflow-visible transform-gpu"
               >
-                <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
-                <span className="relative z-10 flex items-center gap-2 bg-bg rounded-full px-6 py-3">
+                {/* Glow Border */}
+                <span className="absolute inset-[-1px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
+                {/* Permanent Dark Interior */}
+                <span className="relative z-10 flex w-full h-[70px] items-center justify-center gap-2 bg-bg rounded-full transition-colors duration-300 px-2">
                   thomas.sadinpro@outlook.com
                   <span className="text-xs">↗</span>
                 </span>
@@ -100,10 +102,12 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileTap={{ scale: 0.97 }}
-                className="group relative inline-flex items-center gap-2 px-8 py-4 bg-bg border-2 border-stroke rounded-full text-sm text-text-primary font-medium transition-all duration-300 font-body"
+                className="group relative w-full max-w-[280px] mx-auto sm:max-w-none sm:mx-0 sm:w-[260px] inline-flex items-center justify-center border border-stroke rounded-full text-sm text-text-primary font-medium transition-all duration-300 font-body overflow-visible transform-gpu"
               >
-                <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
-                <span className="relative z-10 flex items-center gap-2 bg-bg rounded-full px-6 py-3">
+                {/* Glow Border */}
+                <span className="absolute inset-[-1px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
+                {/* Permanent Dark Interior */}
+                <span className="relative z-10 flex w-full h-[70px] items-center justify-center gap-2 bg-bg rounded-full transition-colors duration-300 px-2">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>

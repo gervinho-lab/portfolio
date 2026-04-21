@@ -92,7 +92,7 @@ export default function Stats() {
           <a
             href="/CV_Thomas_Sadin.pdf"
             download="CV_Thomas_Sadin.pdf"
-            className="group relative inline-flex items-center gap-2 rounded-full px-6 py-3 border border-stroke text-sm text-muted hover:text-text-primary transition-all duration-300 font-body"
+            className="group relative inline-flex items-center gap-2 rounded-full px-6 py-3 border border-stroke text-sm text-text-primary transition-all duration-300 font-body hover:scale-[1.02]"
           >
             <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
             <span className="relative z-10 flex items-center gap-2 bg-bg rounded-full px-5 py-2.5">
